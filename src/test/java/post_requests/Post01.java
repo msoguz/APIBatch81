@@ -36,38 +36,26 @@ public class Post01 extends JsonplaceholderBaseUrl {
 */
 
     @Test
-    public void post01(){
+    public void post01() {
 
         //1-Set the url
-        spec.pathParam("first","todos");
+        spec.pathParam("first", "todos");
 
         //2- Set the expected data
-        JsonPlaceHolderTestData obj=new JsonPlaceHolderTestData();
-        Map<String, Object > expectedData= obj.expectedDataMethod(55, "Tidy your room", false); //Bizim payload'imiz.(Expected datamiz)
+        JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
+        Map<String, Object> expectedData = obj.expectedDataMethod(55, "Tidy your room", false); //Bizim payload'imiz.(Expected datamiz)
 
         //3- Send The Reques and Get The Response
-        Response response=given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{first}");
+        Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{first}");
         response.prettyPrint();
 
 
         //Do Assertion
-        Map<String,Object>  actualData=response.as(HashMap.class);
+        Map<String, Object> actualData = response.as(HashMap.class);
 
-        assertEquals(expectedData.get("completed"),actualData.get("completed"));
-        assertEquals(expectedData.get("tıtle"),actualData.get("tıtle"));
-        assertEquals(expectedData.get("userId"),actualData.get("userId"));
-
-
-
-
-
-
-
-
-
-
+        assertEquals(expectedData.get("completed"), actualData.get("completed"));
+        assertEquals(expectedData.get("tıtle"), actualData.get("tıtle"));
+        assertEquals(expectedData.get("userId"), actualData.get("userId"));
 
     }
-
-
 }
