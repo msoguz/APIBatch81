@@ -17,10 +17,11 @@ public class ObjectMapperUtils {
 
     }
 
-    public static <T> T convertJsonToJava(String json, Class<T> cls){
+    public static <T> T convertJsonToJava(String json, Class<T> cls){   // Burada T type demek. Json'i Javaya ceviriyoruz.
+                                                                        // Data tipini bilmedigimiz icin T'yi kullaniyoruz.
         T javaresult =null;
-        try {
-            javaresult= mapper.readValue(json,cls);
+        try {     // Burada try catch (throw) kullanmamizin sebebi, throws olsaydi baska yerde de isteyecekti. Baska yerde de
+            javaresult= mapper.readValue(json,cls);      // throws istememesi icin try catch yaptik..
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

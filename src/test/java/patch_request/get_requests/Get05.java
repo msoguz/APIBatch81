@@ -1,4 +1,4 @@
-package get_requests;
+package patch_request.get_requests;
 
 import base_url.RestfulBaseUrl;
 import io.restassured.response.Response;
