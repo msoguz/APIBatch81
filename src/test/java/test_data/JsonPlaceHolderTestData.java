@@ -24,4 +24,16 @@ public Map<String, Object> expectedDataMethod(Integer userId, String title, Bool
     return expectedDataMap;
 
     }
+    public String expectedDataInString(int userId, String title,boolean completed){ // Dinamik expected data method'u:Json datayi
+                                                // String bir conteyner olarak return ediyor.
+
+        String expectedData = "{\n" +
+                "                                    \"userId\": "+userId+",\n" +
+                "                                    \"title\": \""+title+"\",\n" +
+                "                                    \"completed\": "+completed+"\n" +
+                "                                    }";
+
+
+        return expectedData;
+    }
 }
