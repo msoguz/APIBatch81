@@ -48,6 +48,4 @@ public class Delete01 extends JsonplaceholderBaseUrl {
 
     }
 
-//Yorum yapacaktim.git add .
-
 }
