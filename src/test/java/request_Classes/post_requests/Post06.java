@@ -1,6 +1,9 @@
 package request_Classes.post_requests;
 
-public class Post06 {
+import base_urls.DummyRestApiBaseUrl;
+import org.junit.Test;
+
+public class Post06 extends DummyRestApiBaseUrl {
 
     /*
        URL: https://dummy.restapiexample.com/api/v1/create
@@ -29,5 +32,43 @@ public class Post06 {
                         "message": "Successfully! Record has been added."
                     }
      */
+        //TODO: Assagidaki Gherkin Language'yi bizden olusturulmasi istendi..
+    /*
+    Given
+        https://dummy.restapiexample.com/api/v1/create
+    And
+        {
+                        "employee_name": "Tom Hanks",
+                        "employee_salary": 111111,
+                        "employee_age": 23,
+                        "profile_image": "Perfect image",
+                        "id": 4891
+                     }
+   When
+        User sends post request
+   Then
+        Status code is 200
+   And
+      Response body should be like the following
+                    {
+                        "status": "success",
+                        "data": {
+                            "employee_name": "Tom Hanks",
+                            "employee_salary": 111111,
+                            "employee_age": 23,
+                            "profile_image": "Perfect image",
+                            "id": 4891
+                        },
+                        "message": "Successfully! Record has been added."
+                    }
+     */
+    @Test
+    public void post06(){
+        //Set The Url
+        spec.pathParam("first","create");
+
+
+
+    }
 
 }

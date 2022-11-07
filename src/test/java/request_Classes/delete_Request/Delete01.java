@@ -1,6 +1,6 @@
 package request_Classes.delete_Request;
 
-import base_url.JsonplaceholderBaseUrl;
+import base_urls.JsonplaceholderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 import utils.ObjectMapperUtils;
