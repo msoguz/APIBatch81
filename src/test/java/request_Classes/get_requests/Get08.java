@@ -23,7 +23,6 @@ public class Get08 extends JsonplaceholderBaseUrl {
 
 
 
-
     /*
     Given
        https://jsonplaceholder.typicode.com/todos/2

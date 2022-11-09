@@ -32,7 +32,7 @@ public class Get02b extends ReqresBaseUrl {
 
         //Set the expected data
 
-        //Send teh Request and Get The Response
+        //Send the Request and Get The Response
        Response response= given().spec(spec).when().get("/{first}/{second}/{third}");
        response.prettyPrint();
 
