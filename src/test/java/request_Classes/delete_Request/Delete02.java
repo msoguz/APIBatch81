@@ -54,12 +54,6 @@ public class Delete02 extends DummyRestApiBaseUrl {
         assertEquals(expectedData.getMessage(),actualData.getMessage());
 
 
-
-
-
     }
-
-
-
 
 }
