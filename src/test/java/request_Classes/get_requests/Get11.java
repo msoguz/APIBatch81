@@ -61,7 +61,7 @@ public class Get11 extends GoRestBaseUrl {
         //Kadin ve erkek sayilarini karsilastiralim
         //1. YOL :
         List<String> genders=response.jsonPath().getList("data.gender");
-       // System.out.println(genders);
+        System.out.println(genders);
 
         int numOfFemale=0;
         for (String w:genders    ) {
