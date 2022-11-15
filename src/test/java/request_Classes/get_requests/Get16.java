@@ -87,6 +87,7 @@ public class Get16 extends DummyRestApiBaseUrl {
 
         assertEquals(6644770,sum);
 
+
         //2.YOL
         int sum2=salaries.stream().reduce(0, Integer::sum);
         System.out.println("sum2 = " + sum2);
